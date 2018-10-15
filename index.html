@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Exercice 4 JQuery - Partie 3</title>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <script src="jquery-3.2.1.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="exercice">
+    <h1>Exercice 4 JQuery - Partie 3</h1>
+    <p>Construisez une page html avec 5 boutons et un rectangle.
+       </br>Chaque bouton provoque une action sur le rectangle.
+     <ul>
+      <li>Bouton 1 : augmente la hauteur de 10px, si il dépasse 100px, il remet la hauteur à 10px</li>
+      <li>Bouton 2 : met le rectangle en vert</li>
+      <li>Bouton 3 : remet les couleurs initiales</li>
+      <li>Bouton 4 : fait disparaître le rectangle</li>
+      <li>Bouton 5 : fait réaparaître le rectangle</li>
+     </ul>
+    </p>
+  </div>
+
+  <div class="exo">
+    <button id="more">Augmente la hauteur</button>
+    <button id="green">En vert</button>
+    <button id="basic">Couleur initiale</button>
+    <button id="hide">Disparaitre</button>
+    <button id="show">Apparaitre</button>
+  </div>
+
+  <div id="rectangle"></div>
+
+
+<script>
+
+$("#more").click(function(){
+      // si la hauteur est infÃ©rieur Ã  100px, on agrandit le rectangle de 10px
+    if( $('#rectangle').height() < 100 ) {
+      //augmente de 10px la hauteur du rectangle
+      $('#rectangle').css('height', $('#rectangle').height("+=10"));
+    } else {
+      // sinon, on remet la valeur Ã  10px
+      $('#rectangle').css('height', '50px');
+    }
+})
+
+$("#green").click(function(){
+   $("#rectangle").css("background-color", "green");
+})
+
+$("#basic").click(function(){
+   $("#rectangle").css("background", "blue");
+})
+
+$("#hide").click(function(){
+   $("#rectangle").hide();
+})
+
+$("#show").click(function(){
+   $("#rectangle").show();
+})
+
+</script>
+</body>
+
+<footer>
+<p>Exercices réalisés à
+<a href="https://lamanu.fr/le-havre">LaManu</a></p>
+</footer>
+</html>
