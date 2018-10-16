@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
   <meta charset="utf-8" />
   <title>Exercice 4 JQuery - Partie 3</title>
@@ -35,34 +35,34 @@
 
 
 <script>
-
+$(function(){
 $("#more").click(function(){
-      // si la hauteur est infÃ©rieur Ã  100px, on agrandit le rectangle de 10px
+        // si la hauteur est inférieur à 100px, on agrandit le rectangle de 10px
     if( $('#rectangle').height() < 100 ) {
       //augmente de 10px la hauteur du rectangle
       $('#rectangle').css('height', $('#rectangle').height("+=10"));
     } else {
-      // sinon, on remet la valeur Ã  10px
-      $('#rectangle').css('height', '50px');
+      // sinon, on remet la valeur à 50px
+      $('#rectangle').css('height', '50');
     }
 })
-
+// passe la couleur du rectangle en vert au clic sur le bouton
 $("#green").click(function(){
-   $("#rectangle").css("background-color", "green");
+   $("#rectangle").css("background", "green");
 })
-
+// remet la couleur en bleu initiale
 $("#basic").click(function(){
    $("#rectangle").css("background", "blue");
 })
-
+//cache le rectangle
 $("#hide").click(function(){
    $("#rectangle").hide();
 })
-
+// ,montre le rectangle
 $("#show").click(function(){
    $("#rectangle").show();
 })
-
+})
 </script>
 </body>
 
